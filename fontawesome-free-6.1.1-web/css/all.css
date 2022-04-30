@@ -6350,8 +6350,8 @@ readers do not read off random characters that represent icons */
 .fa-brands {
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
-  color: #DE1F26;
-  font-size: 25px;
+  color: #FFFFFF;
+  font-size: 20px;
   padding: 0 10px; }
 
 .fa-42-group:before {
