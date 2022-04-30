@@ -34,7 +34,7 @@ header {
   a {
     height: 40px;
 
-    img {
+    .logo-img {
       height: 40px;
     }
   }
@@ -60,12 +60,15 @@ header {
 }
 
 .hero {
-  margin-bottom: 10px;
   max-width: 600px;
-  object-fit: cover;
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 80%;
 
-  img {
+  .hero-img {
     width: 100%;
+    height: 100%;
+    position: absolute;
   }
 }
 
@@ -83,9 +86,11 @@ header {
     flex-direction: column;
     justify-content: center;
 
-    img {
+    .banner-img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
 
     .ecoupon {
@@ -158,8 +163,8 @@ footer {
 
     a {
       background-color: #0D5D90;
-      width: 35px;
-      height: 35px;
+      width: 34px;
+      height: 34px;
       display: flex;
       align-items: center;
       justify-content: center;
