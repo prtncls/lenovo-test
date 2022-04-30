@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  width: 600px;
+  max-width: 600px;
   height: 100%;
   margin: 0;
   display: flex;
@@ -45,10 +45,11 @@ header {
     flex-direction: row;
     list-style: none;
     justify-content: space-evenly;
+    padding: 0;
 
     li a {
       text-decoration: none;
-      font-size: 14px;
+      font-size: 0.65rem;
       color: dimgray;
 
       &:hover {
@@ -59,8 +60,13 @@ header {
 }
 
 .hero {
-  margin: 0;
-  height: 400px;
+  margin-bottom: 10px;
+  max-width: 600px;
+  object-fit: cover;
+
+  img {
+    width: 100%;
+  }
 }
 
 .banners {
@@ -68,9 +74,10 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 10px;
 
   .banner {
-    width: 300px;
+    width: 50%;
     height: 250px;
     display: flex;
     flex-direction: column;
@@ -82,29 +89,34 @@ header {
     }
 
     .ecoupon {
-      width: 200px;
+      width: 80%;
       height: 30px;
       background-color: #c75300;
+      border-radius: 3px;
       color: white;
       display: flex;
       justify-content: center;
       align-items: center;
       font-weight: 400;
+      font-size: 0.8rem;
     }
 
     h1 {
       font-weight: 800;
       margin: 0;
       margin-top: 5px;
+      font-size: 1.5rem;
     }
 
     p {
       width: 245px;
       margin: 10px 0;
+      font-size: 1rem;
+      width: 90%;
     }
 
-    button {
-      width: 115px;
+    .cta {
+      width: 60%;
       height: 40px;
       background-color: #0e5780;
       padding: 0;
@@ -113,6 +125,7 @@ header {
       color: white;
       font-family: 'Lato', sans-serif;
       font-weight: 600;
+      font-size: 0.9rem;
 
       &:hover {
         background-color: #c75300;
@@ -123,10 +136,12 @@ header {
 
   .picture {
     object-fit: cover;
+    width: 50%;
   }
 
   .text {
-    padding-left: 25px;
+    padding-left: 5%;
+    width: 50%;
   }
 }
 
@@ -140,12 +155,45 @@ footer {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+
+    a {
+      background-color: #0D5D90;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 10px;
+      border-radius: 20px;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #c75300;
+        transition: 0.5s;
+      }
+    }
   }  
 
   .disclaimer {
     padding: 0 70px 15px;
-    font-size: 14px;
+    font-size: 0.85rem;
     color: #717D95;
     text-align: center;
   }
+}
+
+@media (min-width: 600px) {
+
+  header ul li a {
+    font-size: 0.78rem;
+  }
+
+  .banners .text {
+    padding-left: 3.5%;
+  }
+
+  .banners .banner .cta {
+    width: 40%;
+  }
+
 }

@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  width: 600px;
+  max-width: 600px;
   height: 100%;
   margin: 0;
   display: flex;
@@ -43,10 +43,11 @@ header ul {
   flex-direction: row;
   list-style: none;
   justify-content: space-evenly;
+  padding: 0;
 }
 header ul li a {
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.65rem;
   color: dimgray;
 }
 header ul li a:hover {
@@ -54,8 +55,12 @@ header ul li a:hover {
 }
 
 .hero {
-  margin: 0;
-  height: 400px;
+  margin-bottom: 10px;
+  max-width: 600px;
+  object-fit: cover;
+}
+.hero img {
+  width: 100%;
 }
 
 .banners {
@@ -63,9 +68,10 @@ header ul li a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 .banners .banner {
-  width: 300px;
+  width: 50%;
   height: 250px;
   display: flex;
   flex-direction: column;
@@ -76,26 +82,31 @@ header ul li a:hover {
   height: 100%;
 }
 .banners .banner .ecoupon {
-  width: 200px;
+  width: 80%;
   height: 30px;
   background-color: #c75300;
+  border-radius: 3px;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 400;
+  font-size: 0.8rem;
 }
 .banners .banner h1 {
   font-weight: 800;
   margin: 0;
   margin-top: 5px;
+  font-size: 1.5rem;
 }
 .banners .banner p {
   width: 245px;
   margin: 10px 0;
+  font-size: 1rem;
+  width: 90%;
 }
-.banners .banner button {
-  width: 115px;
+.banners .banner .cta {
+  width: 60%;
   height: 40px;
   background-color: #0e5780;
   padding: 0;
@@ -104,16 +115,19 @@ header ul li a:hover {
   color: white;
   font-family: "Lato", sans-serif;
   font-weight: 600;
+  font-size: 0.9rem;
 }
-.banners .banner button:hover {
+.banners .banner .cta:hover {
   background-color: #c75300;
   transition: 0.5s;
 }
 .banners .picture {
   object-fit: cover;
+  width: 50%;
 }
 .banners .text {
-  padding-left: 25px;
+  padding-left: 5%;
+  width: 50%;
 }
 
 footer {
@@ -127,9 +141,38 @@ footer .social {
   align-items: center;
   text-decoration: none;
 }
+footer .social a {
+  background-color: #0D5D90;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+footer .social a:hover {
+  background-color: #c75300;
+  transition: 0.5s;
+}
 footer .disclaimer {
   padding: 0 70px 15px;
-  font-size: 14px;
+  font-size: 0.85rem;
   color: #717D95;
   text-align: center;
+}
+
+@media (min-width: 600px) {
+  header ul li a {
+    font-size: 0.78rem;
+  }
+
+  .banners .text {
+    padding-left: 3.5%;
+  }
+
+  .banners .banner .cta {
+    width: 40%;
+  }
 }
